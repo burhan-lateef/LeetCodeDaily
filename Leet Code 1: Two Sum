@@ -2,6 +2,7 @@ Using Python
 1: Two Sum
 
 Brute Force Solution: 0(n^2) : Not Optimal Solution
+The brute force loops are "looking forward" into the future. That's inefficient because you keep re-checking the same numbers.
 
 class Solution(object):
     def twoSum(self, nums, target):
