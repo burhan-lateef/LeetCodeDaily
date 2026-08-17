@@ -5,7 +5,6 @@ class Solution(object):
         return str(x) == str(x)[::-1]
 
 
-
 Here 'x' is given as number, but we type-cast it to string using 'str(x)'.
 'str(x)' returns same number but as string data-type.
 'str(x)[::-1]' returns the reversed 'x'
