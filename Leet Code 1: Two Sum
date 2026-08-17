@@ -1,9 +1,7 @@
 Using Python
 1: Two Sum
 
-Brute Force Solution: 0(n^2) : Not Optimal Solution
-The brute force loops are "looking forward" into the future. That's inefficient because you keep re-checking the same numbers.
-
+Brute Force Solution: O(n^2) : Not Compatible Leet Code Solution
 class Solution(object):
     def twoSum(self, nums, target):
         for i in range(len(nums)):          
@@ -11,4 +9,16 @@ class Solution(object):
                 if nums[i] + nums[j] == target:  
                     return [i, j]
         return [] 
+
+
+Dictionary Concept: O(n) : Compatible with Leet Code
+class Solution(object):
+    def twoSum(self, nums, target):
+        seen = {} 
+        for i, num1 in enumerate(nums):
+            num2 = target - num1
+            if num2 in seen:
+                return [seen[num2], i]
+            seen[num1] = i
+        return []
 
