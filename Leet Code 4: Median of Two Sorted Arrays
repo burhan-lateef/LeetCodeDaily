@@ -1,0 +1,32 @@
+Python
+
+class Solution(object):
+
+    def findMedianSortedArrays(self, nums1, nums2):
+
+#  Merge two arrays, sort them, find the length of new sorted array
+
+        merged = nums1 + nums2
+        s_merged = sorted(merged)
+        total = len(s_merged)
+
+# Total representing length can be odd or even
+
+# For Odd: 
+# [x0, x1, x2, x3, x4,x5,...,xn]     n = odd,   len = size of array
+# middle element given by quotient = len ÷ 2 
+
+# For Even:
+# [x0, x1, x2, x3, x4,...,xn]     for   n = even,  len = size of array
+# Sum of two middle element :
+# n1 = len ÷ 2 
+# n2 = (len ÷ 2) - 1
+# median = (n1+n2) ÷ 2 
+
+        if total % 2 == 0:
+            t1 = total // 2-1
+            t2 = total // 2
+            return (s_merged[t2] + s_merged[t1]) / 2.0 
+        else:
+            t3 = total // 2
+            return float(s_merged[t3])
