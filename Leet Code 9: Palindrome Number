@@ -1,0 +1,17 @@
+Python
+
+class Solution(object):
+    def isPalindrome(self, x):
+        return str(x) == str(x)[::-1]
+
+
+
+Here 'x' is given as number, but we type-cast it to string using 'str(x)'.
+'str(x)' returns same number but as string data-type.
+'str(x)[::-1]' returns the reversed 'x'
+
+For E.x.:
+x = 123
+str(x) = "123"
+str(x)[::-1]  = "321"
+Compare, if they are equal then palindrome otherwise not.
